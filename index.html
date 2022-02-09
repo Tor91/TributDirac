@@ -11,10 +11,26 @@
 		<meta name="author" content="Tornike Gagnidze">
         <link rel="stylesheet" type="text/css" href="style.css">  
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-	
-		
 
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		<!-- Toggle between adding and removing the "responsive" class to topnav 
+			when the user clicks on the icon -->
+
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+			</script>
+			
 
 	</head>
 
@@ -30,18 +46,19 @@
 	<header>
 
 		<figure class="header">
-			<img src="formula.JPG" alt="Dirac equation" title="Dirac equation">			
+			<img src="formula.JPG" alt="Dirac equation" title="Dirac equation" class="responsiveimg">			
 		</figure>
 		<br>
 		
 	<!--Navigation-->
-		<nav class="nav">
-			<ul>
-				<li> <a href="#Biography" >Biography</a></li>
-				<li>   <a href = "#Publications"> Selected Publications</a></li>
-				<li> <a href="#quotes"> Quotes</a></li>
-				<li><a href="#about">Quotes about Dirac</a></li>
-			</ul>
+		<nav class="topnav" id = "myTopnav">
+			
+				<a class = "active" href="#Biography" >Biography</a>
+				<a href = "#Publications"> Selected Publications</a>
+				<a href="#quotes"> Quotes</a>
+				<a href="#about">Quotes about Dirac</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+				<i class="fa fa-bars"></i>
 		</nav>
 		
 	</header>
