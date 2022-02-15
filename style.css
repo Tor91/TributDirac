@@ -31,8 +31,9 @@ body {
   color: #8400ff;
 }
 
+/*not appear icon for large screen*/
 .topnav .icon {
-  display: name;
+  display: none;
 }
 
 
